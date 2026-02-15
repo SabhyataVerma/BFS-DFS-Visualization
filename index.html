@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graph Traversal Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <!-- Header -->
+        <header class="app-header">
+            <h1>Graph Traversal Visualizer</h1>
+        </header>
+
+        <!-- Main Layout -->
+        <div class="main-layout">
+
+            <!-- Sidebar -->
+            <aside class="sidebar">
+
+                <h2>Controls</h2>
+
+                <div class="control-group">
+                    <label>Node</label>
+                    <input type="text" id="node" placeholder="Enter node">
+                    <button onclick="addNode()">Add Node</button>
+                </div>
+
+                <div class="control-group">
+                    <label>Edge (u v)</label>
+                    <input type="text" id="edge" placeholder="A B">
+                    <button onclick="addEdge()">Add Edge</button>
+                </div>
+
+                <div class="control-group">
+                    <button onclick="startBFS()">Start BFS</button>
+                    <button onclick="startDFS()">Start DFS</button>
+                </div>
+
+                <div class="control-group">
+                    <label>Traversal Speed</label>
+                    <input type="range" id="speedControl" min="200" max="2000" value="1000">
+                </div>
+
+                <div class="control-group">
+                    <button class="reset-btn" onclick="resetGraph()">Reset Graph</button>
+                </div>
+
+            </aside>
+
+            <!-- Graph Area -->
+            <section class="graph-section">
+                <canvas id="graph-canvas" width="600" height="400"></canvas>
+            </section>
+
+        </div>
+
+        <!-- Traversal Info -->
+        <div class="info-panel">
+            <h2>Traversal Order</h2>
+            <p id="traversalOutput">No traversal yet</p>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
